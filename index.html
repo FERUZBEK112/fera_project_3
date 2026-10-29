@@ -1,10 +1,458 @@
-<!doctype html><html lang="uz"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#121310"><title>CHIQ CHIQ — Do‘stingni sinab ko‘r!</title><meta name="description" content="Reaksiya, xotira va ranglar: bepul o‘zbekcha mini o‘yinlar. Rekord o‘rnat, do‘stingga challenge yubor va birga bellash!"><meta property="og:title" content="Meni yenga olasanmi? ⚡ CHIQ CHIQ"><meta property="og:description" content="3 ta sinov. Bitta rekord. Do‘stingni sinab ko‘r!"><meta property="og:type" content="website"><meta property="og:image" content="/share.svg"><link rel="icon" href="/icon.svg" type="image/svg+xml"><link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script></head><body>
-<header class="nav"><a class="brand" href="/" aria-label="Chiq Chiq bosh sahifa"><span class="brand-icon">↗</span> CHIQ<span class="muted">CHIQ</span><span class="beta">BETA</span></a><nav><a href="#games">O‘yinlar</a><a href="#ranking">Rekordlar</a><button class="small-button" id="room-top">Do‘stlar bilan <span>↗</span></button></nav></header>
-<main><section class="hero"><div class="hero-copy"><div class="eyebrow"><span class="dot"></span> O‘ZBEKCHA CHALLENGE ARENA</div><h1>GAP KAM.<br><span>REKORD</span><br>KO‘P.</h1><p>Barmog‘ing tezmi, miyangmi?<br>Uchta sinovdan o‘t. Do‘stingga ko‘rsat.</p><button class="primary hero-cta" id="start-all">Meni yenga olasanmi? <span>↗</span></button><div class="hero-note"><span>◎ Akkauntsiz</span><span>✦ Bepul</span><span>↯ Darrov o‘yna</span></div></div><div class="hero-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="floating tag-one">MIYA: TURBO REJIMDA</div><div class="sticker">↯</div><div class="floating tag-two">SENING NAVBATING ↙</div><div class="art-bottom"><span>3 SINOV</span><span>∞ RAQOBAT</span></div><div class="cross">+</div></div></section>
-<div class="ticker" aria-hidden="true"><span>TEZROQ BOS ↗</span><span>YAXSHIROQ ESLA ✦</span><span>CHALG‘IMA ↗</span><span>DO‘STINGNI CHAQIR ✦</span></div>
-<section class="section" id="games"><div class="section-head"><div><span class="overline">01 / O‘ZINGNI SINAB KO‘R</span><h2>Qaysi tomoning kuchli?</h2></div><span class="desktop-note">Bitta o‘yin tanla yoki barchasini o‘yna ↙</span></div><div class="game-grid"><button class="game-card" data-mode="reaction"><div class="card-top"><span class="game-number">01</span><span class="pill">3 RAUND</span></div><span class="game-symbol lime">↯</span><h3>Chaqmoq barmoq</h3><p>Yashil yondimi? Bos!<br>Har millisoniya hisobda.</p><div class="card-bottom"><span>REAKSIYA</span><span class="arrow">↗</span></div></button><button class="game-card" data-mode="memory"><div class="card-top"><span class="game-number">02</span><span class="pill">3 RAUND</span></div><span class="game-symbol lilac">✳</span><h3>Miya fleshkasi</h3><p>Ko‘r. Esla. Qaytar.<br>Xotirangda qancha joy bor?</p><div class="card-bottom"><span>XOTIRA</span><span class="arrow">↗</span></div></button><button class="game-card" data-mode="color"><div class="card-top"><span class="game-number">03</span><span class="pill">8 RAUND</span></div><span class="game-symbol orange">◒</span><h3>Ko‘zingga ishonma</h3><p>So‘zni emas, rangni top.<br>Miyang seni aldamasin.</p><div class="card-bottom"><span>DIQQAT</span><span class="arrow">↗</span></div></button></div></section>
-<section class="daily"><div class="daily-icon">✷</div><div><span class="overline">BUGUN HAMMA UCHUN BIR XIL SINOV</span><h2>Kunlik challenge.</h2><p>Bir xil savollar. Yangi imkoniyat. Bugunning zo‘ri senmisan?</p></div><button class="light-button" id="daily">Bugungi sinov ↗</button></section>
-<section class="section bottom-grid"><div id="ranking"><div class="section-head"><div><span class="overline">02 / NATIJA GAPLASHADI</span><h2>Bugunning zo‘rlari <span class="lime">↗</span></h2></div></div><div class="tabs" role="group" aria-label="Rekord turi"><button class="active" data-rank="all">Arena</button><button data-rank="reaction">Reaksiya</button><button data-rank="memory">Xotira</button><button data-rank="color">Diqqat</button></div><div id="leaderboard" class="leaderboard" aria-live="polite">Natijalar yuklanmoqda…</div><p class="fineprint">Toshkent vaqti bo‘yicha har kuni yangi jadval. Ball: 0–1000.</p></div><aside class="friends"><span class="overline">03 / BIRGA QIZIQROQ</span><div class="friends-art" aria-hidden="true">↗<span>↙</span></div><h2>Do‘sting kuchlimi?<br>Tekshirib ko‘r.</h2><p>Xona och. Kodni ulash. Bir xil sinovda 8 tagacha urinish bilan bellashing.</p><button class="primary" id="room-create">Xona ochish <span>+</span></button><form id="join-form"><label class="sr-only" for="room-code">Xona kodi</label><input id="room-code" placeholder="XONA KODI" maxlength="6" autocomplete="off" required><button type="submit" aria-label="Xonaga kirish">↗</button></form><p class="fineprint">Xona 24 soat ochiq turadi.</p></aside></section>
-<section class="last-call"><span>REKORDING KUTYAPTI.</span><button id="bottom-play" aria-label="O‘yinni boshlash">↗</button></section></main><footer><a class="brand" href="/">CHIQ<span class="muted">CHIQ</span></a><span>O‘yna. Kul. Yana urin.</span><button id="privacy">Maxfiylik</button></footer>
-<dialog id="modal"><div class="modal-head"><a class="brand" href="/">CHIQ<span class="muted">CHIQ</span></a><button id="close-modal" class="close" aria-label="Yopish">×</button></div><div id="stage" aria-live="polite"></div></dialog><div id="toast" role="status"></div>
-</body></html>
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#121310" />
+    <title>CHIQ CHIQ — Do‘stingni sinab ko‘r!</title>
+    <meta
+      name="description"
+      content="Reaksiya, xotira va ranglar: bepul o‘zbekcha mini o‘yinlar. Rekord o‘rnat, do‘stingga challenge yubor va birga bellash!"
+    />
+    <meta property="og:title" content="Meni yenga olasanmi? ⚡ CHIQ CHIQ" />
+    <meta property="og:description" content="3 ta sinov. Bitta rekord. Do‘stingni sinab ko‘r!" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/share.svg" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/style.css?v=mobile-2" />
+    <script src="/app.js?v=mobile-2" defer></script>
+  </head>
+  <body>
+    <header class="nav">
+      <a class="brand" href="/" aria-label="Chiq Chiq bosh sahifa">
+        <span class="brand-icon">
+          <svg
+            class="ui-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path d="M6 18 18 6M6 6h12v12" />
+          </svg>
+        </span>
+        CHIQ
+        <span class="muted">CHIQ</span>
+        <span class="beta">BETA</span>
+      </a>
+      <nav>
+        <a href="#games">O‘yinlar</a>
+        <a href="#ranking">Rekordlar</a>
+        <button class="small-button" id="room-top">
+          Do‘stlar bilan
+          <span>
+            <svg
+              class="ui-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path d="M6 18 18 6M6 6h12v12" />
+            </svg>
+          </span>
+        </button>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <div class="eyebrow">
+            <span class="dot"></span>
+            O‘ZBEKCHA CHALLENGE ARENA
+          </div>
+          <h1>
+            GAP KAM.
+            <br />
+            <span>REKORD</span>
+            <br />
+            KO‘P.
+          </h1>
+          <p>
+            Barmog‘ing tezmi, miyangmi?
+            <br />
+            Uchta sinovdan o‘t. Do‘stingga ko‘rsat.
+          </p>
+          <button class="primary hero-cta" id="start-all">
+            Meni yenga olasanmi?
+            <span>
+              <svg
+                class="ui-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path d="M6 18 18 6M6 6h12v12" />
+              </svg>
+            </span>
+          </button>
+          <div class="hero-note">
+            <span>◎ Akkauntsiz</span>
+            <span>✦ Bepul</span>
+            <span>
+              <svg
+                class="ui-icon bolt-icon"
+                viewBox="0 0 64 64"
+                fill="currentColor"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path d="M36 5 12 36h18l-3 23 26-34H35z" />
+              </svg>
+              Darrov o‘yna
+            </span>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="floating tag-one">MIYA: TURBO REJIMDA</div>
+          <div class="sticker">
+            <svg
+              class="ui-icon bolt-icon"
+              viewBox="0 0 64 64"
+              fill="currentColor"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path d="M36 5 12 36h18l-3 23 26-34H35z" />
+            </svg>
+          </div>
+          <div class="floating tag-two">SENING NAVBATING ↓</div>
+          <div class="art-bottom">
+            <span>3 SINOV</span>
+            <span>∞ RAQOBAT</span>
+          </div>
+          <div class="cross">+</div>
+        </div>
+      </section>
+      <div class="ticker" aria-hidden="true">
+        <span>
+          TEZROQ BOS
+          <svg
+            class="ui-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path d="M6 18 18 6M6 6h12v12" />
+          </svg>
+        </span>
+        <span>YAXSHIROQ ESLA ✦</span>
+        <span>
+          CHALG‘IMA
+          <svg
+            class="ui-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path d="M6 18 18 6M6 6h12v12" />
+          </svg>
+        </span>
+        <span>DO‘STINGNI CHAQIR ✦</span>
+      </div>
+      <section class="section" id="games">
+        <div class="section-head">
+          <div>
+            <span class="overline">01 / O‘ZINGNI SINAB KO‘R</span>
+            <h2>Qaysi tomoning kuchli?</h2>
+          </div>
+          <span class="desktop-note">Bitta o‘yin tanla yoki barchasini o‘yna ↓</span>
+        </div>
+        <div class="game-grid">
+          <button class="game-card" data-mode="reaction">
+            <div class="card-top">
+              <span class="game-number">01</span>
+              <span class="pill">3 RAUND</span>
+            </div>
+            <span class="game-symbol lime">
+              <svg
+                class="ui-icon bolt-icon"
+                viewBox="0 0 64 64"
+                fill="currentColor"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path d="M36 5 12 36h18l-3 23 26-34H35z" />
+              </svg>
+            </span>
+            <h3>Chaqmoq barmoq</h3>
+            <p>
+              Yashil yondimi? Bos!
+              <br />
+              Har millisoniya hisobda.
+            </p>
+            <div class="card-bottom">
+              <span>REAKSIYA</span>
+              <span class="arrow">
+                <svg
+                  class="ui-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path d="M6 18 18 6M6 6h12v12" />
+                </svg>
+              </span>
+            </div>
+          </button>
+          <button class="game-card" data-mode="memory">
+            <div class="card-top">
+              <span class="game-number">02</span>
+              <span class="pill">3 RAUND</span>
+            </div>
+            <span class="game-symbol lilac">
+              <svg
+                class="ui-icon"
+                viewBox="0 0 64 64"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="6"
+                stroke-linecap="round"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path d="M32 7v50M7 32h50M14 14l36 36M14 50l36-36" />
+              </svg>
+            </span>
+            <h3>Miya fleshkasi</h3>
+            <p>
+              Ko‘r. Esla. Qaytar.
+              <br />
+              Xotirangda qancha joy bor?
+            </p>
+            <div class="card-bottom">
+              <span>XOTIRA</span>
+              <span class="arrow">
+                <svg
+                  class="ui-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path d="M6 18 18 6M6 6h12v12" />
+                </svg>
+              </span>
+            </div>
+          </button>
+          <button class="game-card" data-mode="color">
+            <div class="card-top">
+              <span class="game-number">03</span>
+              <span class="pill">8 RAUND</span>
+            </div>
+            <span class="game-symbol orange">◒</span>
+            <h3>Ko‘zingga ishonma</h3>
+            <p>
+              So‘zni emas, rangni top.
+              <br />
+              Miyang seni aldamasin.
+            </p>
+            <div class="card-bottom">
+              <span>DIQQAT</span>
+              <span class="arrow">
+                <svg
+                  class="ui-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path d="M6 18 18 6M6 6h12v12" />
+                </svg>
+              </span>
+            </div>
+          </button>
+        </div>
+      </section>
+      <section class="daily">
+        <div class="daily-icon">✷</div>
+        <div>
+          <span class="overline">BUGUN HAMMA UCHUN BIR XIL SINOV</span>
+          <h2>Kunlik challenge.</h2>
+          <p>Bir xil savollar. Yangi imkoniyat. Bugunning zo‘ri senmisan?</p>
+        </div>
+        <button class="light-button" id="daily">
+          Bugungi sinov
+          <svg
+            class="ui-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path d="M6 18 18 6M6 6h12v12" />
+          </svg>
+        </button>
+      </section>
+      <section class="section bottom-grid">
+        <div id="ranking">
+          <div class="section-head">
+            <div>
+              <span class="overline">02 / NATIJA GAPLASHADI</span>
+              <h2>
+                Bugunning zo‘rlari
+                <span class="lime">
+                  <svg
+                    class="ui-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <path d="M6 18 18 6M6 6h12v12" />
+                  </svg>
+                </span>
+              </h2>
+            </div>
+          </div>
+          <div class="tabs" role="group" aria-label="Rekord turi">
+            <button class="active" data-rank="all">Arena</button>
+            <button data-rank="reaction">Reaksiya</button>
+            <button data-rank="memory">Xotira</button>
+            <button data-rank="color">Diqqat</button>
+          </div>
+          <div id="leaderboard" class="leaderboard" aria-live="polite">Natijalar yuklanmoqda…</div>
+          <p class="fineprint">Toshkent vaqti bo‘yicha har kuni yangi jadval. Ball: 0–1000.</p>
+        </div>
+        <aside class="friends">
+          <span class="overline">03 / BIRGA QIZIQROQ</span>
+          <div class="friends-art" aria-hidden="true">
+            <svg
+              class="ui-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path d="M6 18 18 6M6 6h12v12" />
+            </svg>
+            <span>↓</span>
+          </div>
+          <h2>
+            Do‘sting kuchlimi?
+            <br />
+            Tekshirib ko‘r.
+          </h2>
+          <p>Xona och. Kodni ulash. Bir xil sinovda 8 tagacha urinish bilan bellashing.</p>
+          <button class="primary" id="room-create">
+            Xona ochish
+            <span>+</span>
+          </button>
+          <form id="join-form">
+            <label class="sr-only" for="room-code">Xona kodi</label>
+            <input
+              id="room-code"
+              placeholder="XONA KODI"
+              maxlength="6"
+              autocomplete="off"
+              required
+            />
+            <button type="submit" aria-label="Xonaga kirish">
+              <svg
+                class="ui-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path d="M6 18 18 6M6 6h12v12" />
+              </svg>
+            </button>
+          </form>
+          <p class="fineprint">Xona 24 soat ochiq turadi.</p>
+        </aside>
+      </section>
+      <section class="last-call">
+        <span>REKORDING KUTYAPTI.</span>
+        <button id="bottom-play" aria-label="O‘yinni boshlash">
+          <svg
+            class="ui-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path d="M6 18 18 6M6 6h12v12" />
+          </svg>
+        </button>
+      </section>
+    </main>
+    <footer>
+      <a class="brand" href="/">
+        CHIQ
+        <span class="muted">CHIQ</span>
+      </a>
+      <span>O‘yna. Kul. Yana urin.</span>
+      <button id="privacy">Maxfiylik</button>
+    </footer>
+    <dialog id="modal">
+      <div class="modal-head">
+        <a class="brand" href="/">
+          CHIQ
+          <span class="muted">CHIQ</span>
+        </a>
+        <button id="close-modal" class="close" aria-label="Yopish">×</button>
+      </div>
+      <div id="stage" aria-live="polite"></div>
+    </dialog>
+    <div id="toast" role="status"></div>
+  </body>
+</html>
